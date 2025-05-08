@@ -28,8 +28,8 @@ src/
 ├── pages/ # Route-based pages (e.g., Home, Products, ProductDetail)
 ├── utils/ # Utility functions (e.g., getAllProducts)
 ├── hooks/ # Custom React hooks (e.g., useBlazeSlider)
-├── roots/ # Assets such as images and icons
-└── lib/ # Shared application logic or configuration
+├── routes/ # For routing configuration
+└── lib/ # 
 
 
 ## 🚀 Getting Started
@@ -88,7 +88,7 @@ src/
 ├── pages/ # Route'a karşılık gelen sayfalar (Home, Products, ProductDetail, etc.)
 ├── utils/ # Yardımcı fonksiyonlar (örn: getAllProducts)
 ├── hooks/ # Özel hook'lar (örn: useBlazeSlider)
-├── roots/ # Görseller, ikonlar vb.
+├── routes/ # Sayfa yönlendirmeleri
 └── lib # Uygulama kök bileşeni
 
 ## 🚀 Kurulum
