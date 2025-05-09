@@ -75,9 +75,9 @@ export default function CustomerReviews() {
   };
 
   return (
-    <div className="container mx-auto h-full max-w-6xl lg:p-4 py-3 md:px-10 lg:px-0">
-      <div className="grid grid-cols-2 flex items-center mb-2">
-        <h2 className="text-l font-bold text-start">
+    <div className="container mx-auto h-full max-w-6xl lg:p-4 px-4 py-3 md:px-10 lg:px-0">
+      <div className="grid grid-cols-3 flex items-center mb-2">
+        <h2 className="text-l font-bold text-start col-span-2">
           GERÇEK MÜŞTERİ YORUMLARI
         </h2>
         <div className="flex justify-end">

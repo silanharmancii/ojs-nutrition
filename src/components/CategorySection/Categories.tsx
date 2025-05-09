@@ -52,11 +52,11 @@ const CategoryList: React.FC = () => {
             <img
               src="/public/images/category/tum-urunler.png"
               className="absolute
-    top-5 left-2 w-16 max-w-[64px] 
-    sm:top-5 sm:left-8 sm:w-20 sm:max-w-[88px]
-    md:top-12 md:left-4 md:w-20 md:max-w-[160px]
-    xl:top-10 xl:left-10 xl:w-40 xl:max-w-[168px]
-    h-auto object-contain z-10"
+                          top-12 left-4 w-24 max-w-[160px]
+                          sm:top-12 sm:left-4 sm:w-20 sm:max-w-[88px]
+                          md:top-12 md:left-4 md:w-20 md:max-w-[160px]
+                          xl:top-10 xl:left-10 xl:w-40 xl:max-w-[168px]
+                          h-auto object-contain z-10"
               alt="overlay icon"
             />
             <div className="absolute inset-0 flex flex-col justify-center items-end pr-4">

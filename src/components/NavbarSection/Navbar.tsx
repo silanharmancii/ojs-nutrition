@@ -4,7 +4,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
 import { faBars, faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
-import { CategoryData, fetchCategories } from "../CategorySection/fetchCategories";
+import {
+  CategoryData,
+  fetchCategories,
+} from "../CategorySection/fetchCategories";
 import { Link } from "react-router-dom";
 
 const info = [
@@ -54,24 +57,34 @@ export function NavMenu() {
           </button>
           {/* Hamburger Menü Dropdown */}
           {menuOpen && (
-            <div className="lg:hidden md:hidden bg-white shadow-md p-4">
-              <ul className="space-y-4">
+            <div className="fixed inset-0 bg-white z-50 p-6 flex flex-col">
+              <div className="flex justify-end">
+                <button onClick={() => setMenuOpen(false)} className="text-2xl font-bold text-gray-600">
+                  ✕
+                </button>
+              </div>
+
+              <ul className="mt-10 space-y-6 text-lg font-medium text-gray-800">
                 {isLoading ? (
                   <li className="text-gray-500">Yükleniyor...</li>
                 ) : (
                   categories.map((category) => (
-                    <li key={category.id} className="text-gray-700">
+                    <li key={category.id} className="border-b pb-2">
                       {category.name}
                     </li>
                   ))
                 )}
-                <li className="text-gray-700">Hesabım</li>
+                <li className="border-t pt-4 text-gray-700">Hesabım</li>
               </ul>
             </div>
           )}
           {/* LOGO */}
-          <Link to={'/'}>
-            <img className="mx-auto lg:m-1 md:m-1" src="/public/images/LOGO_Siyah.png" alt="" />
+          <Link to={"/"}>
+            <img
+              className="mx-auto lg:m-1 md:m-1"
+              src="/public/images/LOGO_Siyah.png"
+              alt=""
+            />
           </Link>
           {/* Sepet */}
           <button className="lg:hidden md:hidden flex items-center">
@@ -79,11 +92,10 @@ export function NavMenu() {
               icon={faCartShopping}
               className="text-2xl text-gray-700"
             />
-             <span className=" relative -left-[32px] -top-[18px] w-5 h-5 bg-red-600 text-white text-[12px] flex items-center justify-center rounded-full">
-      0
-    </span>
+            <span className=" relative -left-[32px] -top-[18px] w-5 h-5 bg-red-600 text-white text-[12px] flex items-center justify-center rounded-full">
+              0
+            </span>
           </button>
-         
         </div>
         {/* Search - Mobilde tam genişlikte */}
         <div className="lg:hidden md:hidden ">
@@ -93,7 +105,6 @@ export function NavMenu() {
               placeholder="Aradığınız ürünü yazınız..."
               className="w-full outline-none bg-white text-gray-600 text-sm px-4 py-3 uppercase"
             />
-
           </div>
         </div>
         {/* SEARCH */}
@@ -111,10 +122,12 @@ export function NavMenu() {
           </button>
         </div>
 
-
         <div className=" grid grid-cols-2 gap-2 flex">
           {/* HESAP */}
-          <Menu as="div" className="relative  m-auto text-left hidden md:inline-block lg:inline-block">
+          <Menu
+            as="div"
+            className="relative  m-auto text-left hidden md:inline-block lg:inline-block"
+          >
             <div>
               <MenuButton className="inline-flex w-32 h-12 justify-center items-center gap-x-1.5 rounded-md bg-white text-[#919191] px-3 py-2 text-md font-semibold shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
                 <FontAwesomeIcon
@@ -177,18 +190,15 @@ export function NavMenu() {
               type="button"
               className="inline-flex w-44 h-12 justify-center items-center gap-x-1.5 rounded-md text-white bg-[#919191] px-3 py-2 text-md font-semibold shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-neutral-400"
             >
-              <span className="relative left-[15px] -top-[6px] w-5 h-5 bg-red-600 text-white text-[12px] flex items-center justify-center rounded-full">
-      0
-    </span>
+              <span className="relative left-[15px] -top-[12px] w-5 h-5 bg-red-600 text-white text-[12px] flex items-center justify-center rounded-full">
+                0
+              </span>
               <FontAwesomeIcon
                 icon={faCartShopping}
                 className="text-2xl text-white"
-                
               />
               SEPET
             </button>
-            
-            
           </div>
         </div>
       </div>
@@ -201,18 +211,17 @@ export function NavMenu() {
             categories.map((category) => (
               <div
                 key={category.id}
-                className="text-white p-2 flex justify-between">
-                <Link to={`/categories/${category.id}`}>
-                  {category.name}
-                </Link>
-
+                className="text-white p-2 flex justify-between"
+              >
+                <Link to={`/categories/${category.id}`}>{category.name}</Link>
               </div>
             ))
           )}
           <div className="text-white p-2 flex justify-between">
             <Link
               to={`/products`} // Kategoriye özel URL
-            >Tüm Ürünler
+            >
+              Tüm Ürünler
             </Link>
           </div>
         </div>

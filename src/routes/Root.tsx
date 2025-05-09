@@ -1,3 +1,4 @@
+import { Footer } from "@/components/FooterSection/Footer";
 import { NavMenu } from "@/components/NavbarSection/Navbar";
 import { Outlet } from "react-router-dom";
 
@@ -8,6 +9,7 @@ export function Root() {
       <div id="detail">
         <Outlet />
       </div>
+    <Footer></Footer>
     </>
   );
 }
