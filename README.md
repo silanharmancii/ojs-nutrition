@@ -1,50 +1,118 @@
-# React + TypeScript + Vite
+**ENGLISH
+# OJS Nutrition - Frontend Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project involves building the frontend interface of an e-commerce website using React (Vite + TypeScript). The designs are sourced from Figma and support desktop, tablet, and mobile variants.
 
-Currently, two official plugins are available:
+## 🎯 Project Goals
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Develop a modern and responsive user interface
+- Build reusable React components based on design
+- Integrate data dynamically via backend APIs
 
-## Expanding the ESLint configuration
+## 🔗 Figma Design
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+[Figma Design - OJS Nutrition](https://www.figma.com/design/j4MKQvHHSwM6DRcmrXEhh2/OJS-Nutrition?node-id=0%3A1&t=wafr87dSc74JawJC-1)
 
-- Configure the top-level `parserOptions` property like this:
+## ⚙️ Technologies Used
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- React (Vite + TypeScript)
+- TailwindCSS
+- React Router
+- PNPM (package manager)
+- Blaze Slider (with a custom `useBlazeSlider` hook)
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## 📁 Folder Structure
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+src/
+├── components/ # Reusable React components (e.g., ProductCard, Navbar)
+├── pages/ # Route-based pages (e.g., Home, Products, ProductDetail)
+├── utils/ # Utility functions (e.g., getAllProducts)
+├── hooks/ # Custom React hooks (e.g., useBlazeSlider)
+├── routes/ # For routing configuration
+└── lib/ # 
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+
+## 🚀 Getting Started
+
+To run this project locally:
+
+```bash
+git clone https://github.com/username/project-name.git
+cd project-name
+pnpm install
+pnpm dev
+
+🔄 Features Implemented
+✅ Responsive design for desktop, tablet, and mobile
+
+✅ Component-based architecture with props
+
+✅ Dynamic components powered by API data
+
+✅ "Best Sellers" section connected to backend API
+
+✅ Product listing page (/products)
+
+✅ Product detail page
+
+✅ Conditional rendering for features like discounts
+
+
+**TURKISH 
+
+# OJS Nutrition - Frontend Projesi
+
+Bu proje, bir e-ticaret sitesinin frontend arayüzünün React (Vite + TypeScript) kullanılarak geliştirilmesini kapsamaktadır. Tasarımlar Figma üzerinden alınmış olup, hem masaüstü hem de mobil/tablet varyantları desteklenmektedir.
+
+## 🎯 Proje Hedefi
+
+- Modern ve duyarlı (responsive) bir arayüz tasarımı oluşturmak
+- React bileşen mimarisi ile tekrar kullanılabilir component'ler geliştirmek
+- Verileri backend API ile entegre ederek dinamik içerikler sunmak
+
+## 🔗 Figma Tasarımı
+
+[OJS Nutrition Tasarımı - Figma](https://www.figma.com/design/j4MKQvHHSwM6DRcmrXEhh2/OJS-Nutrition?node-id=0%3A1&t=wafr87dSc74JawJC-1)
+
+## ⚙️ Teknolojiler
+
+- React (Vite + TypeScript)
+- TailwindCSS
+- React Router
+- PNPM (paket yöneticisi)
+- Blaze Slider (özelleştirilmiş `useBlazeSlider` hook'u ile)
+
+## 📁 Klasör Yapısı
+src/
+├── components/ # Tekrar kullanılabilir React bileşenleri (ProductCard, Navbar, etc.)
+├── pages/ # Route'a karşılık gelen sayfalar (Home, Products, ProductDetail, etc.)
+├── utils/ # Yardımcı fonksiyonlar (örn: getAllProducts)
+├── hooks/ # Özel hook'lar (örn: useBlazeSlider)
+├── routes/ # Sayfa yönlendirmeleri
+└── lib # Uygulama kök bileşeni
+
+## 🚀 Kurulum
+
+Projeyi bilgisayarınızda çalıştırmak için:
+
+```bash
+git clone https://github.com/kullaniciadi/proje-adi.git
+cd proje-adi
+pnpm install
+pnpm dev
+
+🔄 Yapılan Özellikler
+
+✅ Masaüstü, tablet ve mobil için duyarlı (responsive) tasarım
+
+✅ Prop tabanlı bileşen (component) mimarisi
+
+✅ API verileri ile çalışan dinamik bileşenler
+
+✅ "Çok Satanlar" bölümünün backend API ile entegrasyonu
+
+✅ Ürün listeleme sayfası (/urunler)
+
+✅ Ürün detay sayfası
+
+✅ İndirim gibi özelliklerde koşullu gösterim (conditional rendering)
