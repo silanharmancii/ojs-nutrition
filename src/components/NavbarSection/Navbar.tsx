@@ -74,7 +74,7 @@ export function NavMenu() {
                     </li>
                   ))
                 )}
-                <li className="border-t pt-4 text-gray-700">Hesabım</li>
+                <li className="pt-4 text-gray-700">Hesabım</li>
               </ul>
             </div>
           )}
